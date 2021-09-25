@@ -11,24 +11,23 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var blackSquareView: UIView!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var counterLabelMain: UINavigationItem!
-    @IBOutlet weak var viewNumberOne: UIView!
+    @IBOutlet weak var counterLabel: UILabel!
     var counter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        counterLabelMain.title = "Нажатия: 0"
+        counterLabel.text = "\nНажатия: 0"
     }
     
     @IBAction func tapOnBlackAquareAction(_ sender: UITapGestureRecognizer) {
         counter += 1
-        counterLabelMain.title = "Нажатия: \(counter)"
-        let minX = Double(blackSquareView.frame.width / 2)
-        let minY = Double(blackSquareView.frame.height / 2)
-        let maxX = Double(viewNumberOne.frame.maxX)
-        let maxY = Double(viewNumberOne.frame.maxY)
-        let randomX = Double.random(in: minX...maxX - 100)
-        let randomY = Double.random(in: minY...maxY - 100)
+        counterLabel.text = "\nНажатия: \(counter)"
+        let minX = Double((blackSquareView.frame.width) / 2)
+        let minY = Double((blackSquareView.frame.height) / 2 + counterLabel.frame.height)
+        let maxX = Double(mainView.frame.maxX - minX )
+        let maxY = Double(mainView.frame.maxY - minY )
+        let randomX = Double.random(in: minX...maxX )
+        let randomY = Double.random(in: minY...maxY )
         blackSquareView.layer.position = CGPoint(x: randomX, y: randomY)
     }
 }

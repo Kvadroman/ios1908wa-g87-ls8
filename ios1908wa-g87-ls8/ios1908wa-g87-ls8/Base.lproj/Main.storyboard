@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NEH-pc-OvF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NJf-1A-Ygw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -16,37 +16,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BE9-0O-Uem">
-                                <rect key="frame" x="33" y="88" width="350" height="753"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8Q-3D-cCB">
-                                        <rect key="frame" x="166" y="82" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
-                                        <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="ovB-NS-gAR" appends="YES" id="42r-Sf-sV4"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8Q-3D-cCB">
+                                <rect key="frame" x="56" y="161" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ovB-NS-gAR" appends="YES" id="42r-Sf-sV4"/>
+                                </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK3-VZ-P0V">
+                                <rect key="frame" x="20" y="0.0" width="374" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bPb-0F-vRx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EEd-Wn-Zws"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BE9-0O-Uem" firstAttribute="leading" secondItem="EEd-Wn-Zws" secondAttribute="leading" constant="33" id="21B-7q-1tR"/>
-                            <constraint firstItem="EEd-Wn-Zws" firstAttribute="trailing" secondItem="BE9-0O-Uem" secondAttribute="trailing" constant="31" id="4ZU-GD-VwM"/>
-                            <constraint firstItem="BE9-0O-Uem" firstAttribute="top" secondItem="EEd-Wn-Zws" secondAttribute="top" id="UTU-kt-75R"/>
-                            <constraint firstItem="EEd-Wn-Zws" firstAttribute="bottom" secondItem="BE9-0O-Uem" secondAttribute="bottom" constant="21" id="bRa-jP-h8R"/>
+                            <constraint firstItem="bK3-VZ-P0V" firstAttribute="leading" secondItem="EEd-Wn-Zws" secondAttribute="leading" constant="20" id="deN-Zx-jkL"/>
+                            <constraint firstItem="EEd-Wn-Zws" firstAttribute="trailing" secondItem="bK3-VZ-P0V" secondAttribute="trailing" constant="20" id="g7L-ns-i45"/>
+                            <constraint firstItem="bK3-VZ-P0V" firstAttribute="top" secondItem="VaU-ys-V8g" secondAttribute="top" id="zr6-nL-ruN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2a8-M2-BLY"/>
                     <connections>
                         <outlet property="blackSquareView" destination="B8Q-3D-cCB" id="aLe-SV-0Tx"/>
-                        <outlet property="counterLabelMain" destination="2a8-M2-BLY" id="12e-Hc-vXz"/>
+                        <outlet property="counterLabel" destination="bK3-VZ-P0V" id="i3K-Rl-Hz3"/>
                         <outlet property="mainView" destination="VaU-ys-V8g" id="nae-uV-DcN"/>
-                        <outlet property="viewNumberOne" destination="BE9-0O-Uem" id="KbY-Ie-aWK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPm-Ha-GNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -57,24 +57,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1091.304347826087" y="-209.59821428571428"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bBu-Fr-wbj">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NEH-pc-OvF" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5LD-4F-tkM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NJf-1A-Ygw" kind="relationship" relationship="rootViewController" id="WNC-rx-Fp8"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Reg-AQ-bb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="181.15942028985509" y="-209.59821428571428"/>
         </scene>
     </scenes>
     <resources>
